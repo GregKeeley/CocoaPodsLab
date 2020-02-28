@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		C11C2F1F2409C32E0097DBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11C2F1E2409C32E0097DBB3 /* Assets.xcassets */; };
 		C11C2F222409C32E0097DBB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11C2F202409C32E0097DBB3 /* LaunchScreen.storyboard */; };
 		C11C2F4A2409C5690097DBB3 /* RandomUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11C2F492409C5690097DBB3 /* RandomUserModel.swift */; };
+		C19C397B2409C96800C04BD1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C397A2409C96800C04BD1 /* MainView.swift */; };
+		C19C397D2409C97500C04BD1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C397C2409C97500C04BD1 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		C11C2F212409C32E0097DBB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C11C2F232409C32E0097DBB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C11C2F492409C5690097DBB3 /* RandomUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserModel.swift; sourceTree = "<group>"; };
+		C19C397A2409C96800C04BD1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C19C397C2409C97500C04BD1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,6 @@
 				9D60351756DF2185788058BC /* Pods-CocoaPodsLab.debug.xcconfig */,
 				8F66D06AC01C5B8C46503C38 /* Pods-CocoaPodsLab.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,6 +87,8 @@
 				C11C2F152409C3270097DBB3 /* AppDelegate.swift */,
 				C11C2F172409C3270097DBB3 /* SceneDelegate.swift */,
 				C11C2F192409C3270097DBB3 /* MainViewController.swift */,
+				C19C397A2409C96800C04BD1 /* MainView.swift */,
+				C19C397C2409C97500C04BD1 /* DetailView.swift */,
 				C11C2F492409C5690097DBB3 /* RandomUserModel.swift */,
 				C11C2F1E2409C32E0097DBB3 /* Assets.xcassets */,
 				C11C2F202409C32E0097DBB3 /* LaunchScreen.storyboard */,
@@ -207,8 +212,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C11C2F1A2409C3270097DBB3 /* MainViewController.swift in Sources */,
+				C19C397D2409C97500C04BD1 /* DetailView.swift in Sources */,
 				C11C2F4A2409C5690097DBB3 /* RandomUserModel.swift in Sources */,
 				C11C2F162409C3270097DBB3 /* AppDelegate.swift in Sources */,
+				C19C397B2409C96800C04BD1 /* MainView.swift in Sources */,
 				C11C2F182409C3270097DBB3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
