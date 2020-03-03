@@ -13,7 +13,6 @@ class MainView: UIView {
 
     public lazy var tableView: UITableView = {
         let table = UITableView()
-        
         return table
     }()
     
@@ -30,10 +29,8 @@ class MainView: UIView {
     }
     private func constraintsTableView() {
         addSubview(tableView)
-        translatesAutoresizingMaskIntoConstraints = false
         tableView.snp.makeConstraints { (make) in
-            make.bottom.top.leading.trailing.equalTo(self.safeAreaLayoutGuide)
-            
+            make.bottom.top.leading.trailing.equalTo(safeAreaLayoutGuide)
         }
     }
 

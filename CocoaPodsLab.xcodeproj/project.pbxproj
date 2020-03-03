@@ -17,6 +17,10 @@
 		C18AC695240ED684003839E7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18AC694240ED684003839E7 /* APIClient.swift */; };
 		C18AC697240ED938003839E7 /* RandomUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18AC696240ED938003839E7 /* RandomUserCell.swift */; };
 		C18AC699240EDA76003839E7 /* RandomUserCellNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18AC698240EDA76003839E7 /* RandomUserCellNib.xib */; };
+		C18AC69B240EE2D0003839E7 /* SlantedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18AC69A240EE2D0003839E7 /* SlantedView.swift */; };
+		C18AC69D240EE3A7003839E7 /* SlantedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18AC69C240EE3A7003839E7 /* SlantedCell.swift */; };
+		C18AC69F240EE42C003839E7 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18AC69E240EE42C003839E7 /* UIColor+Extension.swift */; };
+		C18AC6A1240EE93C003839E7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18AC6A0240EE93C003839E7 /* DetailViewController.swift */; };
 		C19C397B2409C96800C04BD1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C397A2409C96800C04BD1 /* MainView.swift */; };
 		C19C397D2409C97500C04BD1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C397C2409C97500C04BD1 /* DetailView.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +40,10 @@
 		C18AC694240ED684003839E7 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		C18AC696240ED938003839E7 /* RandomUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserCell.swift; sourceTree = "<group>"; };
 		C18AC698240EDA76003839E7 /* RandomUserCellNib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RandomUserCellNib.xib; sourceTree = "<group>"; };
+		C18AC69A240EE2D0003839E7 /* SlantedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlantedView.swift; sourceTree = "<group>"; };
+		C18AC69C240EE3A7003839E7 /* SlantedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlantedCell.swift; sourceTree = "<group>"; };
+		C18AC69E240EE42C003839E7 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		C18AC6A0240EE93C003839E7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C19C397A2409C96800C04BD1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C19C397C2409C97500C04BD1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,7 +105,11 @@
 				C19C397A2409C96800C04BD1 /* MainView.swift */,
 				C18AC696240ED938003839E7 /* RandomUserCell.swift */,
 				C19C397C2409C97500C04BD1 /* DetailView.swift */,
+				C18AC6A0240EE93C003839E7 /* DetailViewController.swift */,
 				C18AC698240EDA76003839E7 /* RandomUserCellNib.xib */,
+				C18AC69A240EE2D0003839E7 /* SlantedView.swift */,
+				C18AC69C240EE3A7003839E7 /* SlantedCell.swift */,
+				C18AC69E240EE42C003839E7 /* UIColor+Extension.swift */,
 				C11C2F492409C5690097DBB3 /* RandomUserModel.swift */,
 				C11C2F1E2409C32E0097DBB3 /* Assets.xcassets */,
 				C11C2F202409C32E0097DBB3 /* LaunchScreen.storyboard */,
@@ -221,10 +233,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C18AC69B240EE2D0003839E7 /* SlantedView.swift in Sources */,
 				C11C2F1A2409C3270097DBB3 /* MainViewController.swift in Sources */,
 				C18AC695240ED684003839E7 /* APIClient.swift in Sources */,
+				C18AC6A1240EE93C003839E7 /* DetailViewController.swift in Sources */,
+				C18AC69F240EE42C003839E7 /* UIColor+Extension.swift in Sources */,
 				C19C397D2409C97500C04BD1 /* DetailView.swift in Sources */,
 				C11C2F4A2409C5690097DBB3 /* RandomUserModel.swift in Sources */,
+				C18AC69D240EE3A7003839E7 /* SlantedCell.swift in Sources */,
 				C11C2F162409C3270097DBB3 /* AppDelegate.swift in Sources */,
 				C19C397B2409C96800C04BD1 /* MainView.swift in Sources */,
 				C11C2F182409C3270097DBB3 /* SceneDelegate.swift in Sources */,

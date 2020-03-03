@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     override func loadView() {
         view = mainView
     }
-    private var users: [User]? {
+    private var users = [User]() {
         didSet {
             DispatchQueue.main.async {
                 self.mainView.tableView.reloadData()
@@ -46,18 +46,23 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users?.count ?? 0
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? RandomUserCell else {
             fatalError("Failed to dequeue as a randomUserCell")
         }
-        let user = users?[indexPath.row]
-        cell.configureCell(for: user!)
+        let user = users[indexPath.row]
+        cell.configureCell(for: user)
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("did select")
+        let user = users[indexPath.row]
+        let detailVC = DetailViewController(user: user)
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
     
 }
 
