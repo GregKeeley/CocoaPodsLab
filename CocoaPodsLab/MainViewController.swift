@@ -14,24 +14,47 @@ class MainViewController: UIViewController {
     override func loadView() {
         view = mainView
     }
+    private var users: [User]? {
+        didSet {
+            DispatchQueue.main.async {
+                self.mainView.tableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .green
         mainView.tableView.delegate = self
         mainView.tableView.dataSource = self
+        mainView.tableView.register(UINib(nibName: "RandomUserCellNib", bundle: nil), forCellReuseIdentifier: "cell")
+        getRandomUsers()
     }
-
+    private func getRandomUsers() {
+        APIClient.getRandomUsers() { [weak self] (results) in
+            switch results {
+            case .failure(let error):
+                print("Error:\(error)")
+            case .success(let usersData):
+                DispatchQueue.main.async {
+                    self?.users = usersData.results
+                }
+            }
+        }
+    }
 }
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return users?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.largeContentTitle = "Greg"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? RandomUserCell else {
+            fatalError("Failed to dequeue as a randomUserCell")
+        }
+        let user = users?[indexPath.row]
+        cell.configureCell(for: user!)
         return cell
     }
     
@@ -39,5 +62,7 @@ extension MainViewController: UITableViewDataSource {
 }
 
 extension MainViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(100)
+    }
 }
